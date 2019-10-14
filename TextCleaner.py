@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-
 import re
 from bs4 import BeautifulSoup
-
 
 class TextCleaner(object):
     def __init__(self):
@@ -22,8 +20,6 @@ class TextCleaner(object):
         replaced_text = re.sub(r'[@＠]\w+', '', replaced_text)  # メンションの除去
         replaced_text = re.sub(r'https?:\/\/.*?[\r\n ]', '', replaced_text)  # URLの除去
         replaced_text = re.sub(r'　', ' ', replaced_text)  # 全角空白の除去
-         
-        
         return replaced_text
     
     def clean_html_tags(self,html_text):
@@ -63,5 +59,3 @@ class TextCleaner(object):
         fileobj = open(fpath, "w",encoding=enc)
         fileobj.write(text)
         fileobj.close()
-        
-        
