@@ -10,7 +10,7 @@ import TextNormalizer
 import StopwordRemover
 
 if __name__ == "__main__":
-    fileobj = open("sample.html", "r",encoding="utf_8")
+    fileobj = open("source/sample.html", "r",encoding="utf_8")
     text = fileobj.read()
     fileobj.close()
     
